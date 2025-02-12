@@ -21,6 +21,6 @@ RUN bin/rails assets:precompile
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh
 ENTRYPOINT ["entrypoint.sh"]
-EXPOSE 80
+EXPOSE 2823
 
-CMD ["rails", "server", "-b", "0.0.0.0", "--port=80"]
+CMD ["rails", "server", "-b", "0.0.0.0", "--port=2823:80"]
